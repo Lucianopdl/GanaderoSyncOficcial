@@ -4,15 +4,16 @@ import { Toaster } from "@/components/ui/toaster";
 import './globals.css';
 import { WhatsAppButton } from '@/components/whatsapp-button';
 
-// SEO Optimizado para Feedlot y Ganadería
+// SEO Optimizado para Feedlot y Ganadería en Argentina y Latinoamérica
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ganaderosync.com'),
+  metadataBase: new URL('https://ganadero-sync-oficcial.vercel.app'),
   title: {
-    default: 'GanaderoSync - Software de Gestión de Feedlot y Ganadería con IA',
+    default: 'GanaderoSync - Software de Gestión de Feedlot y Ganadería con IA | Argentina',
     template: '%s | GanaderoSync'
   },
-  description: 'Software líder en gestión de feedlot, engorda de ganado y administración ganadera. Optimiza tu producción con IA, trazabilidad completa, control de inventario y análisis predictivo. Solución integral para ganaderos modernos.',
+  description: 'Software líder en gestión de feedlot, engorda de ganado y administración ganadera en Argentina y Latinoamérica. Optimiza tu producción con IA, trazabilidad completa, control de inventario y análisis predictivo. Solución integral para ganaderos modernos.',
   keywords: [
+    // Keywords generales
     'software feedlot',
     'gestión de feedlot',
     'software ganadero',
@@ -21,6 +22,18 @@ export const metadata: Metadata = {
     'software para ganadería',
     'trazabilidad ganadera',
     'control de ganado',
+    // Keywords específicas de Argentina
+    'software feedlot argentina',
+    'gestión ganadera argentina',
+    'software ganadero corrientes',
+    'feedlot corrientes',
+    'engorda de ganado argentina',
+    'software para feedlot argentina',
+    'administración de feedlot argentina',
+    'trazabilidad bovina argentina',
+    'software ganadero litoral',
+    'feedlot nordeste argentino',
+    // Keywords de funcionalidades
     'software para feedlot',
     'administración de feedlot',
     'gestión de engordas',
@@ -37,7 +50,11 @@ export const metadata: Metadata = {
     'administración ganadera',
     'software para productores de carne',
     'optimización feedlot',
-    'rentabilidad ganadera'
+    'rentabilidad ganadera',
+    // Keywords regionales
+    'software ganadero latinoamérica',
+    'feedlot latinoamérica',
+    'gestión ganadera mercosur'
   ],
   authors: [{ name: 'GanaderoSync Global' }],
   creator: 'GanaderoSync Global',
@@ -49,14 +66,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'es_ES',
-    url: 'https://ganaderosync.com',
+    locale: 'es_AR',
+    url: 'https://ganadero-sync-oficcial.vercel.app',
     siteName: 'GanaderoSync',
-    title: 'GanaderoSync - Software de Gestión de Feedlot y Ganadería con IA',
-    description: 'Transforma tu feedlot con el software más avanzado de gestión ganadera. IA, trazabilidad, control total y análisis predictivo para maximizar tu rentabilidad.',
+    title: 'GanaderoSync - Software de Gestión de Feedlot y Ganadería con IA | Argentina',
+    description: 'Transforma tu feedlot con el software más avanzado de gestión ganadera en Argentina. IA, trazabilidad, control total y análisis predictivo para maximizar tu rentabilidad.',
     images: [
       {
-        url: '/logo gs.png',
+        url: '/logo.png',
         width: 1200,
         height: 630,
         alt: 'GanaderoSync - Software de Gestión de Feedlot',
@@ -65,9 +82,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GanaderoSync - Software de Gestión de Feedlot y Ganadería con IA',
-    description: 'Transforma tu feedlot con IA, trazabilidad completa y análisis predictivo. Software líder en gestión ganadera.',
-    images: ['/logo gs.png'],
+    title: 'GanaderoSync - Software de Gestión de Feedlot y Ganadería con IA | Argentina',
+    description: 'Transforma tu feedlot con IA, trazabilidad completa y análisis predictivo. Software líder en gestión ganadera en Argentina.',
+    images: ['/logo.png'],
     creator: '@GanaderoSync',
   },
   robots: {
@@ -85,12 +102,12 @@ export const metadata: Metadata = {
     google: 'google-site-verification-code', // Reemplazar con código real
   },
   alternates: {
-    canonical: 'https://ganaderosync.com',
+    canonical: 'https://ganadero-sync-oficcial.vercel.app',
     languages: {
-      'es-ES': 'https://ganaderosync.com',
-      'es-MX': 'https://ganaderosync.com/mx',
-      'es-AR': 'https://ganaderosync.com/ar',
-      'en-US': 'https://ganaderosync.com/en',
+      'es-AR': 'https://ganadero-sync-oficcial.vercel.app',
+      'es-ES': 'https://ganadero-sync-oficcial.vercel.app',
+      'es-MX': 'https://ganadero-sync-oficcial.vercel.app',
+      'en-US': 'https://ganadero-sync-oficcial.vercel.app',
     },
   },
   icons: {

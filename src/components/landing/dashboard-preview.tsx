@@ -13,98 +13,128 @@ const healthAlerts = [
 
 export function DashboardPreview() {
   return (
-    <section id="dashboard" className="bg-muted/30">
-      <div className="container">
+    <section id="dashboard" className="relative bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50 py-24">
+      {/* Degradado de transición desde Features */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent pointer-events-none" />
+
+      <div className="container relative">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 mb-4">
+            <span className="text-sm font-semibold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
+              Panel de Control
+            </span>
+          </div>
+          <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-slate-900 via-cyan-900 to-slate-900 bg-clip-text text-transparent mb-4">
             Tu Operación Completa, de un Vistazo
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-slate-600 leading-relaxed">
             Experimenta claridad y control con nuestro panel intuitivo en tiempo real. Todos tus datos críticos, visualizados de forma atractiva.
           </p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-4">
-          <Card className="transition-transform duration-300 hover:scale-105">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Total de Ganado</CardTitle>
-              <Users className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">12,450</div>
-              <p className="text-xs text-muted-foreground">+2.1% desde el mes pasado</p>
-            </CardContent>
-          </Card>
-          <Card className="transition-transform duration-300 hover:scale-105">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Peso Promedio (KG)</CardTitle>
-              <Scale className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">542.7</div>
-              <p className="text-xs text-muted-foreground">+8.5kg esta semana</p>
-            </CardContent>
-          </Card>
-          <Card className="transition-transform duration-300 hover:scale-105">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Conversión de Alimento</CardTitle>
-              <TrendingUp className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">6.1 : 1</div>
-              <p className="text-xs text-muted-foreground">-0.2 del último ciclo</p>
-            </CardContent>
-          </Card>
-          <Card className="transition-transform duration-300 hover:scale-105">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Alertas Activas</CardTitle>
-              <AlertTriangle className="h-4 w-4 text-destructive" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">4</div>
-              <p className="text-xs text-muted-foreground">Se requiere atención inmediata</p>
-            </CardContent>
-          </Card>
+        {/* Cards de estadísticas centradas */}
+        <div className="max-w-6xl mx-auto mb-8">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <Card className="bg-white/80 backdrop-blur-sm border-2 border-slate-200 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium text-slate-700">Total de Ganado</CardTitle>
+                <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/10 to-blue-500/10">
+                  <Users className="h-5 w-5 text-cyan-600" />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">12,450</div>
+                <p className="text-xs text-slate-500 mt-1">+2.1% desde el mes pasado</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/80 backdrop-blur-sm border-2 border-slate-200 hover:border-emerald-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-emerald-500/10">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium text-slate-700">Peso Promedio (KG)</CardTitle>
+                <div className="p-2 rounded-lg bg-gradient-to-br from-emerald-500/10 to-teal-500/10">
+                  <Scale className="h-5 w-5 text-emerald-600" />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">542.7</div>
+                <p className="text-xs text-slate-500 mt-1">+8.5kg esta semana</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/80 backdrop-blur-sm border-2 border-slate-200 hover:border-violet-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-violet-500/10">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium text-slate-700">Conversión de Alimento</CardTitle>
+                <div className="p-2 rounded-lg bg-gradient-to-br from-violet-500/10 to-purple-500/10">
+                  <TrendingUp className="h-5 w-5 text-violet-600" />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="text-3xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">6.1 : 1</div>
+                <p className="text-xs text-slate-500 mt-1">-0.2 del último ciclo</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/80 backdrop-blur-sm border-2 border-slate-200 hover:border-rose-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-rose-500/10">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium text-slate-700">Alertas Activas</CardTitle>
+                <div className="p-2 rounded-lg bg-gradient-to-br from-rose-500/10 to-pink-500/10">
+                  <AlertTriangle className="h-5 w-5 text-rose-600" />
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="text-3xl font-bold bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">4</div>
+                <p className="text-xs text-slate-500 mt-1">Se requiere atención inmediata</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-          <Card className="lg:col-span-4">
-            <CardHeader>
-              <CardTitle className="font-headline">Aumento de Peso a lo Largo del Tiempo</CardTitle>
-            </CardHeader>
-            <CardContent className="pl-2">
-              <DashboardCharts chartType="line" />
-            </CardContent>
-          </Card>
-          <Card className="lg:col-span-3">
-            <CardHeader>
-              <CardTitle className="font-headline">Alertas de Salud</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Corral</TableHead>
-                    <TableHead>ID Animal</TableHead>
-                    <TableHead>Alerta</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {healthAlerts.map((alert) => (
-                    <TableRow key={alert.animalId}>
-                      <TableCell className="font-medium">{alert.pen}</TableCell>
-                      <TableCell>{alert.animalId}</TableCell>
-                      <TableCell>
-                        <Badge variant={alert.severity as "destructive" | "default"} className={alert.severity === 'warning' ? 'bg-yellow-500 text-white' : ''}>
-                          {alert.alert}
-                        </Badge>
-                      </TableCell>
+        {/* Cards grandes centradas */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-7">
+            <Card className="lg:col-span-4 group transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 hover:border-cyan-500/50">
+              <CardHeader>
+                <CardTitle className="font-headline group-hover:text-cyan-600 transition-colors duration-300">Aumento de Peso a lo Largo del Tiempo</CardTitle>
+              </CardHeader>
+              <CardContent className="pl-2">
+                <DashboardCharts chartType="line" />
+              </CardContent>
+              {/* Línea de acento inferior */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </Card>
+
+            <Card className="lg:col-span-3 group transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-rose-500/20 hover:border-rose-500/50">
+              <CardHeader>
+                <CardTitle className="font-headline group-hover:text-rose-600 transition-colors duration-300">Alertas de Salud</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Corral</TableHead>
+                      <TableHead>ID Animal</TableHead>
+                      <TableHead>Alerta</TableHead>
                     </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
+                  </TableHeader>
+                  <TableBody>
+                    {healthAlerts.map((alert) => (
+                      <TableRow key={alert.animalId}>
+                        <TableCell className="font-medium">{alert.pen}</TableCell>
+                        <TableCell>{alert.animalId}</TableCell>
+                        <TableCell>
+                          <Badge variant={alert.severity as "destructive" | "default"} className={alert.severity === 'warning' ? 'bg-yellow-500 text-white' : ''}>
+                            {alert.alert}
+                          </Badge>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </CardContent>
+              {/* Línea de acento inferior */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-rose-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </Card>
+          </div>
         </div>
       </div>
     </section>

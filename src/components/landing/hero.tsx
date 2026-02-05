@@ -12,7 +12,7 @@ export function Hero() {
       <div className="absolute inset-0 opacity-10">
         <Image
           src="/logo gs.png"
-          alt="GanaderoSync"
+          alt="GanaderoSync - Software de gestión de feedlot y ganadería con inteligencia artificial"
           fill
           className="object-cover scale-110"
           unoptimized
@@ -31,30 +31,31 @@ export function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
       {/* Contenido principal */}
-      <div className="relative container mx-auto px-4 min-h-screen flex flex-col items-center justify-center text-center">
+      <div className="relative container mx-auto px-4 min-h-screen flex flex-col items-center justify-center text-center z-10">
 
         {/* Badge superior */}
         <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 backdrop-blur-xl mb-8 animate-fadeIn">
           <Sparkles className="w-4 h-4 text-cyan-400" />
           <span className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Tecnología de Vanguardia en Gestión Ganadera
+            Software Líder en Gestión de Feedlot con Inteligencia Artificial
           </span>
         </div>
 
         {/* Título principal */}
         <h1 className="font-headline font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-6 animate-slideUp">
           <span className="block text-white mb-2">
-            El Futuro de la
+            Software de Gestión de
           </span>
           <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer">
-            Gestión Ganadera
+            Feedlot y Ganadería
           </span>
         </h1>
 
-        {/* Subtítulo */}
+        {/* Subtítulo optimizado para SEO */}
         <p className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-3xl mb-12 leading-relaxed animate-fadeIn" style={{ animationDelay: '200ms' }}>
-          Transforma tu feedlot con <span className="text-cyan-400 font-semibold">inteligencia artificial</span>,
-          datos en tiempo real y control total de tus operaciones.
+          Optimiza tu <strong className="text-cyan-400 font-semibold">engorda de ganado</strong> con inteligencia artificial,
+          trazabilidad completa, control de inventario y análisis predictivo. La solución definitiva para
+          <strong className="text-cyan-400 font-semibold"> gestión de feedlot</strong> y producción ganadera rentable.
         </p>
 
         {/* Botones CTA */}
@@ -113,8 +114,11 @@ export function Hero() {
 
       </div>
 
+      {/* Degradado de transición suave hacia el fondo blanco */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-50 pointer-events-none z-0" />
+
       {/* Indicador de scroll */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
         <div className="w-6 h-10 rounded-full border-2 border-cyan-500/50 flex items-start justify-center p-2">
           <div className="w-1 h-2 bg-cyan-400 rounded-full animate-pulse" />
         </div>

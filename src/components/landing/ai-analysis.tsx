@@ -14,15 +14,15 @@ const initialState = {
 };
 
 const sampleData = JSON.stringify({
-    "time_period": "2024-Q2",
-    "total_cattle": 12450,
-    "average_initial_weight_kg": 455,
-    "average_final_weight_kg": 542,
-    "mortality_rate_percent": 0.8,
-    "average_daily_gain_kg": 1.5,
-    "feed_conversion_ratio": 6.1,
-    "cost_per_kg_gain_usd": 2.15,
-    "stock_valuation_change_percent": 4.5
+  "time_period": "2024-Q2",
+  "total_cattle": 12450,
+  "average_initial_weight_kg": 455,
+  "average_final_weight_kg": 542,
+  "mortality_rate_percent": 0.8,
+  "average_daily_gain_kg": 1.5,
+  "feed_conversion_ratio": 6.1,
+  "cost_per_kg_gain_usd": 2.15,
+  "stock_valuation_change_percent": 4.5
 }, null, 2);
 
 export function AiAnalysis() {
@@ -39,13 +39,22 @@ export function AiAnalysis() {
   };
 
   return (
-    <section id="ai-analysis">
-      <div className="container">
+    <section id="ai-analysis" className="relative bg-gradient-to-b from-slate-50 via-white to-slate-50 py-24">
+      {/* Degradado de transición desde Dashboard */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-slate-100/50 to-transparent pointer-events-none" />
+
+      <div className="container relative">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 mb-4">
+            <Wand2 className="w-4 h-4 text-violet-600" />
+            <span className="text-sm font-semibold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
+              Inteligencia Artificial
+            </span>
+          </div>
+          <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-slate-900 via-violet-900 to-slate-900 bg-clip-text text-transparent mb-4">
             Desbloquea Perspectivas Predictivas con IA
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-slate-600 leading-relaxed">
             Nuestro motor de IA analiza tus datos para revelar tendencias, predecir resultados y proporcionar consejos prácticos para aumentar tu rentabilidad. Pruébalo ahora.
           </p>
         </div>

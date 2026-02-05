@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { GanaderoSyncLogo } from "@/components/icons";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Menu, Sparkles } from "lucide-react";
@@ -45,23 +45,33 @@ export function Header() {
   );
 
   return (
-    <header className={cn(
-      "sticky top-0 z-50 w-full transition-all duration-500",
-      isScrolled
-        ? "border-b border-border/50 bg-background/70 backdrop-blur-xl shadow-lg shadow-primary/5"
-        : "bg-background/50 backdrop-blur-sm"
-    )}>
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full transition-all duration-500",
+        isScrolled
+          ? "border-b border-border/50 bg-background/70 backdrop-blur-xl shadow-lg shadow-primary/5"
+          : "bg-background/50 backdrop-blur-sm"
+      )}
+      role="banner"
+    >
       <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-8 flex items-center gap-2 group">
-          <div className="p-1.5 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300 group-hover:scale-110">
-            <GanaderoSyncLogo className="h-6 w-6 text-primary group-hover:text-accent transition-colors duration-300" />
+        <Link href="/" className="mr-8 flex items-center gap-3 group" aria-label="GanaderoSync - Inicio">
+          <div className="relative w-14 h-14 rounded-lg overflow-hidden bg-white shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+            <Image
+              src="/logo.png"
+              alt="GanaderoSync Logo"
+              width={56}
+              height={56}
+              className="object-contain"
+              priority
+            />
           </div>
-          <span className="font-headline text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <span className="font-headline text-xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
             GanaderoSync
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-1" aria-label="Navegación principal">
           <NavLinks />
         </nav>
 
@@ -89,11 +99,17 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-background/95 backdrop-blur-xl">
               <nav className="grid gap-6 text-lg font-medium mt-8">
-                <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4 group">
-                  <div className="p-1.5 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10">
-                    <GanaderoSyncLogo className="h-6 w-6 text-primary" />
+                <Link href="/" className="flex items-center gap-3 text-lg font-semibold mb-4 group">
+                  <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-white shadow-md">
+                    <Image
+                      src="/logo.png"
+                      alt="GanaderoSync Logo"
+                      width={40}
+                      height={40}
+                      className="object-contain"
+                    />
                   </div>
-                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
                     GanaderoSync
                   </span>
                 </Link>

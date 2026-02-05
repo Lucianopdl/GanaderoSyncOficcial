@@ -1,21 +1,25 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+
+# Permitir todo excepto rutas específicas
 Disallow: /api/
-Disallow: /_next/
+Disallow: /_next/static/
 Disallow: /admin/
 
 # Sitemaps
-Sitemap: https://ganaderosync.com/sitemap.xml
+Sitemap: https://ganadero-sync-oficcial.vercel.app/sitemap.xml
 
 # Crawl-delay para bots específicos
 User-agent: Googlebot
 Crawl-delay: 0
+Allow: /
 
 User-agent: Bingbot
 Crawl-delay: 0
+Allow: /
 
-# Bloquear bots maliciosos
+# Bloquear bots maliciosos (pero permitir Google)
 User-agent: AhrefsBot
 Disallow: /
 

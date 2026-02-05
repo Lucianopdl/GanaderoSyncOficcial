@@ -94,14 +94,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: '/logo.png', sizes: 'any' },
-      { url: '/favicon.ico', sizes: '16x16 32x32' },
-    ],
-    shortcut: '/favicon.ico',
-    apple: [
-      { url: '/logo.png', sizes: '180x180', type: 'image/png' },
-    ],
+    icon: '/logo.png',
+    apple: '/logo.png',
   },
   category: 'technology',
 };
